@@ -10,11 +10,7 @@ export default class Pricing {
     return this._amount;
   }
 
-  get currency() {
-    return this._currency;
-  }
-
-  set amount(amount) {
+  set amount(value) {
     if (typeof value === 'number') {
       this._amount = value;
     } else {
@@ -22,7 +18,11 @@ export default class Pricing {
     }
   }
 
-  set currency(currency) {
+  get currency() {
+    return this._currency;
+  }
+
+  set currency(value) {
     if (value instanceof Currency) {
       this._currency = value;
     } else {
