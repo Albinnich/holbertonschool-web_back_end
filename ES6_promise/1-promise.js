@@ -12,4 +12,4 @@ function getFullResponseFromApi(success) {
   });
 }
 
-//export default getFullResponseFromAPI;
+export default getFullResponseFromAPI;
