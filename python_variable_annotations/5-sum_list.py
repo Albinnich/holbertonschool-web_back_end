@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 '''
-Module defines a type-annotated function sum_list which takes a list input_list of floats as argument and returns their sum as a float
+Module defines a type-annotated function sum_list as float
 '''
 from typing import List
 
