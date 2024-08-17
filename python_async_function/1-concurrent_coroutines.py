@@ -2,16 +2,13 @@
 '''
 Module to execute multiple coroutines at the same time
 '''
-
-
-import asyncio
 from typing import List
-from 0-basic_async_syntax import wait_random
+wait_random = __import__('0-basic_async_syntax').wait_random
 
-async def wait_n(n: int, max_delay: int) -> List[float]:
-    '''
-    Spawns wait_random n times with specified max_delay and
-    returns list of delays in ascending order
-    '''
-    delays = await asyncio.gather(*(wait_random(max_delay) for _ in range(n)))
+
+async def wait_n(n: int, max_delay: int = 10) -> List[float]:
+    """Declaration"""
+    delays: List[float] = []
+    for i in range(n):
+        delays.append(await wait_random(max_delay))
     return sorted(delays)
